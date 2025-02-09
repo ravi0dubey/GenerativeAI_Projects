@@ -3,5 +3,5 @@
 ```
 1. conda create -p genaivenv python==3.12
 2. conda activate D:\Study\GenerativeAI_Projects\genaivenv
-3. pip install -r requirements_dev.txt
+3. pip install -r requirements.txt
 ```
