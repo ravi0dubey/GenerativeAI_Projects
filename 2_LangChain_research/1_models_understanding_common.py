@@ -12,3 +12,4 @@ print(result_opeanapi.content)
 model_anthropic = ChatAnthropic(model="claude-3-5-sonnet-20241022", max_tokens=1000, temperature=0,api_key=os.getenv("ANTHROPIC_API_KEY"))
 result_anthropic = model_anthropic.invoke("Divide result by 1.5")
 print(result_anthropic)
+

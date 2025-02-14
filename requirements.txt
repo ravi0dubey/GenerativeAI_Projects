@@ -1,7 +1,13 @@
 langchain_openai 
 langchain_anthropic
+langchain.llms
 langchain_core
 python-dotenv
 openai
 python-dotenv
 anthropic
+pinecone
+tensorflow
+keras
+boto3
+Pillow
