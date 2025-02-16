@@ -1,7 +1,7 @@
 
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate,FewShotPromptTemplate
 from langchain_openai import ChatOpenAI
-from langchain.llms import OpenAI
+from openai import OpenAI
 import os
 from dotenv import load_dotenv
 

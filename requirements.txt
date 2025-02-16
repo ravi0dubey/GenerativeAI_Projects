@@ -1,13 +1,35 @@
-langchain_openai 
-langchain_anthropic
-langchain.llms
+# LangChain Core
+langchain
 langchain_core
-python-dotenv
+
+
+# OpenAI Integration
+langchain-openai 
 openai
-python-dotenv
+
+# Google Gemini (PaLM) Integration
+langchain-google-genai
+google-generativeai
+
+# Anthropic
+langchain_anthropic
 anthropic
-pinecone
+
+# Hugging Face Integration
+langchain-huggingface
+transformers
+huggingface-hub
+
+#Environment Variable Management
+python-dotenv
+
+#Machine Learning Utilities
+numpy
+scikit-learn
+
+#Deep Learning
 tensorflow
 keras
+
 boto3
 Pillow
