@@ -1,13 +1,18 @@
 from langchain_openai import ChatOpenAI
 import os
-chat_model_openapi= ChatOpenAI(model = "gpt-4",temperature=0, api_key=os.getenv("OPEN_API_KEY") )
+print ("Result1")
+chat_model_openapi= ChatOpenAI(model = "gpt-4",temperature=0,  api_key=os.getenv("OPEN_API_KEY") )
 result_opeanapi = chat_model_openapi.invoke("Who is President of USA")
 print(result_opeanapi.content)
-
+print ("Result2")
 chat_model_openapi= ChatOpenAI(model = "chatgpt-4o-latest",temperature=0, api_key=os.getenv("OPEN_API_KEY") )
 result_opeanapi = chat_model_openapi.invoke("Who is President of USA")
 print(result_opeanapi.content)
-
+print ("Result3")
 chat_model_openapi= ChatOpenAI(model = "gpt-4o-2024-11-20",temperature=0, api_key=os.getenv("OPEN_API_KEY") )
+result_opeanapi = chat_model_openapi.invoke("Who is President of USA")
+print(result_opeanapi.content)
+print ("Result4")
+chat_model_openapi= ChatOpenAI(model = "gpt-4",temperature=0, max_completion_tokens=10, api_key=os.getenv("OPEN_API_KEY") )
 result_opeanapi = chat_model_openapi.invoke("Who is President of USA")
 print(result_opeanapi.content)
