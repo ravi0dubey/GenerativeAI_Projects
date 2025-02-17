@@ -2,16 +2,24 @@
 
 ******We have two types of Chat Models******
 1. **Closed-Source Models**
-2. **Open-Source Models**
+2. **Open-Source Models** -> It can be run locally or using HugginFace Interface API
 
+![image](https://github.com/user-attachments/assets/9e4985ec-0053-4bc5-ab90-d31f51ac49f3)
+
+**Advanatages of Using Open-Source Models compared to Closed-source Models**
 ```
 i.  Open-source language models are freely available AI models that can be downloaded, modified, fine-tuned,
     and deployed without restrictions from a central provider. 
 ii. Unlike closed-source models such as OpenAI's GPT-4, Anthropic's Claude, or Google's Gemini,
    open-source models allow full control and customization.
 ```
-![image](https://github.com/user-attachments/assets/9e4985ec-0053-4bc5-ab90-d31f51ac49f3)
-
+**Disadvanatages of Using Open-Source Models compared to Closed-source Models**
+```
+i.  To run larger open-source models, locally, It requires expensive GPUs.
+ii. Requires Installation of dependencies like PyTorch, CUDA, Transformers.
+iii. Most open source models does not have Reinforcement Learning, making them weaker in instruction following
+iv. It does not support images, audio or video
+```
 
 
 ## Closed-Source Models 
@@ -48,3 +56,4 @@ It seems Gemini models are trained till Oct 2024, hence it is unable to give lat
 ## Open Source Models 
 
 Repository of Open Source Models are in **HuggingFace**.
+We can run Open Source Models either using HugginFace Interface API or downloading it locally.
