@@ -10,7 +10,8 @@ i.  Open-source language models are freely available AI models that can be downl
 ii. Unlike closed-source models such as OpenAI's GPT-4, Anthropic's Claude, or Google's Gemini,
    open-source models allow full control and customization.
 ```
-   ![image](https://github.com/user-attachments/assets/88eaa75e-b769-41b4-99a5-8e5333d07ac7)
+![image](https://github.com/user-attachments/assets/9e4985ec-0053-4bc5-ab90-d31f51ac49f3)
+
 
 
 ## Closed-Source Models 
