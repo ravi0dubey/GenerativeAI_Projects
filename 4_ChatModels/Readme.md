@@ -5,13 +5,15 @@
 2. **Open-Source Models**
 
 ```
-i.  Open-source language models are freely available AI models that can be downloaded, modified, fine-tuned, and deployed without restrictions from a central provider. 
-ii. Unlike closed-source models such as OpenAI's GPT-4, Anthropic's Claude, or Google's Gemini, open-source models allow full control and customization.
+i.  Open-source language models are freely available AI models that can be downloaded, modified, fine-tuned,
+    and deployed without restrictions from a central provider. 
+ii. Unlike closed-source models such as OpenAI's GPT-4, Anthropic's Claude, or Google's Gemini,
+   open-source models allow full control and customization.
 ```
    ![image](https://github.com/user-attachments/assets/88eaa75e-b769-41b4-99a5-8e5333d07ac7)
 
 
-## Open Source Models Models 
+## Closed-Source Models 
 
 ### 1. OpenAI_Chat Models 
 #### Parameters of OpenAI
@@ -43,7 +45,4 @@ It seems Gemini models are trained till Oct 2024, hence it is unable to give lat
 ![image](https://github.com/user-attachments/assets/e2fc60f6-39c9-44a9-b049-4394745ecb8a)
 
 ## Open Source Models 
-```
-Open-source language models are freely available AI models that can be downloaded, modified, fine-tuned, and deployed without restrictions from a central provider. 
-Unlike closed-source models such as OpenAI's GPT-4, Anthropic's Claude, or Google's Gemini, open-source models allow full control and customization.
-```
+
