@@ -47,3 +47,4 @@ It seems Gemini models are trained till Oct 2024, hence it is unable to give lat
 
 ## Open Source Models 
 
+Repository of Open Source Models are in **HuggingFace**.
