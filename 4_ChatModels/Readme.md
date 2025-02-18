@@ -61,6 +61,11 @@ We can run Open Source Models either using HugginFace Interface API or downloadi
 ### 2. TinyLlama/TinyLlama-1.1B-Chat-v1.0 Chat Model run locally
 
 #### Code output
-Model gets downloaded into your local system before providing the result
+Running first time it takes time as its download the model from Hugginface into local system before processing our query
 ![image](https://github.com/user-attachments/assets/2e7d58aa-826a-4655-b0a4-f6893be30b79)
+
+When i run it again, model execution is fast. If i ask additional question and run it again, still the execution is fast
+![image](https://github.com/user-attachments/assets/005de44e-9ab8-4205-8677-361788d9f332)
+
+
 
