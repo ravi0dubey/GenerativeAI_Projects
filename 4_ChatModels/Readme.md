@@ -57,3 +57,10 @@ It seems Gemini models are trained till Oct 2024, hence it is unable to give lat
 
 Repository of Open Source Models are in **HuggingFace**.
 We can run Open Source Models either using HugginFace Interface API or downloading it locally.
+
+### 2. TinyLlama/TinyLlama-1.1B-Chat-v1.0 Chat Model run locally
+
+#### Code output
+Model gets downloaded into your local system before providing the result
+![image](https://github.com/user-attachments/assets/2e7d58aa-826a-4655-b0a4-f6893be30b79)
+
