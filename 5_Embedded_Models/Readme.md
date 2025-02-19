@@ -69,3 +69,13 @@ In below snapshot we can see it downloded the model into local sytem, and then i
 ![image](https://github.com/user-attachments/assets/aba1ddb0-a5d0-4133-8cd0-43a9406091c0)
 
 
+## Project 1: Using OpeniAI Embedding Models perform Similarity Search on Documents
+
+We will feed documents to our **OpenAI Embedding models** of dimension 300 and then ask question from the documents
+Embedding model will conver the documents into vectors of dimension **300** and store it internally.
+When the question is asked it uses query embedding models to convert the query into vector and perform **cosine similarity** search
+to find the text in the document similar to the query asked.
+
+#### Code output
+![image](https://github.com/user-attachments/assets/90e35f0c-890a-4beb-9027-7397938a7e65)
+
