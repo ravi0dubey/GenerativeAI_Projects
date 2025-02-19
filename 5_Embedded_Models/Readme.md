@@ -76,6 +76,28 @@ Embedding model will conver the documents into vectors of dimension **300** and 
 When the question is asked it uses query embedding models to convert the query into vector and perform **cosine similarity** search
 to find the text in the document similar to the query asked.
 
+Below lines of code will convert each sentence of the Documents into vector of dimensions 300
+
+
+```
+Documents = [
+    "Ravi Dubey is a Data Scientist working on Some Big project based out of Toronto. His Hobbies are wathcing Movies and Playing Tennis",
+    "Astha is an HR professional who works in Big Firm in Toronto. Her Hobbies are Singing and relaxing",
+    "Illisha Dubey is a student who studies in Grade 4. Her Hobbies are Dancing and Drawing",
+    "Lika Dubey is a student who studies in Grade 1. Her Hobbies are Dancing and playing"
+]
+openai_embedding_models = OpenAIEmbeddings(model='text-embedding-3-large', dimensions=300,api_key=os.getenv("OPEN_API_KEY"))
+doc_openai_embeddocs_vector = openai_embedding_models.embed_documents(Documents)
+```
+When the query1 is provided it uses query embedding models to convert the query into vector and perform **cosine similarity** search
+to find the text in the document similar to the query asked.
+```
+query1 = 'What does Illisha likes?'
+query1_embeddings = openai_embedding_models.embed_query(query1)
+query1_score = cosine_similarity([query1_embeddings],doc_openai_embeddocs_vector)[0]
+index, similarity_score = sorted(list(enumerate(query1_score)),key=lambda x:x[1])[-1]
+print(f"Question : {query1}  : Answer : {Documents[index]}")
+```
 #### Code output
 ![image](https://github.com/user-attachments/assets/90e35f0c-890a-4beb-9027-7397938a7e65)
 
