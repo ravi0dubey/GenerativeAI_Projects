@@ -1,9 +1,10 @@
 from langchain_openai import OpenAIEmbeddings
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 print ("Result1 with model OpenAi-text-embedding-3-large")
-openai_embedding_models = OpenAIEmbeddings(model='text-embedding-3-large', dimensions=32)
+openai_embedding_models = OpenAIEmbeddings(model='text-embedding-3-large', dimensions=32,api_key=os.getenv("OPEN_API_KEY"))
 """
 Below line will convert the query into vector of dimensions 32 as specified in the model
 """
