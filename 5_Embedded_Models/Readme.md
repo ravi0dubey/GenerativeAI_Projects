@@ -44,7 +44,9 @@ Above code will convert the Documents text into vector of dimensions 32 as speci
 #### Code output
 ![image](https://github.com/user-attachments/assets/1c5ae04d-4d3d-4e33-92a2-650271587973)
 
-### Open Source Embedding Models
+
+
+## Open Source Embedding Models
 Repository of Open Source Embedding Models are in HuggingFace. We can run Open Source Models either using HugginFace Interface API or downloading it locally
 ### 1. all-MiniLM-L6-v2
 #### Parameters of  all-MiniLM-L6-v2 for Single query
