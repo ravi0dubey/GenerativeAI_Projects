@@ -29,8 +29,14 @@ Above code will convert the user query into vector of dimensions 32 as specified
 1. Model = text-embedding-3-large
 2. dimensions= What should be the dimension of vector
 
-```result_openai_embedquery_vector = openai_embedding_models.embed_query("Donal Trump is president of USA")```
+```Documents = [
+    "Ottawa is capital of Canada",
+    "WashingtonDC is capitcal of USA",
+    "New Delhi is the capital of USA"
+]
+openai_embedding_models = OpenAIEmbeddings(model='text-embedding-3-large', dimensions=32,api_key=os.getenv("OPEN_API_KEY"))```
 
-Above code will convert the user query into vector of dimensions 32 as specified in the model
+Above code will convert the Documents text into vector of dimensions 32 as specified in the model
 #### Code output
-![image](https://github.com/user-attachments/assets/3d843624-920b-46dc-89dc-6f2898810de7)
+![image](https://github.com/user-attachments/assets/1c5ae04d-4d3d-4e33-92a2-650271587973)
+
