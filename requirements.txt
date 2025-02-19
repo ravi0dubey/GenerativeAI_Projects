@@ -29,7 +29,7 @@ scikit-learn
 
 #Deep Learning
 tensorflow
-keras
+tf-keras
 
 boto3
 Pillow
