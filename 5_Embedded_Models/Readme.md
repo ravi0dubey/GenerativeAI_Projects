@@ -36,6 +36,7 @@ Documents = [
     "New Delhi is the capital of USA"
 ]
 openai_embedding_models = OpenAIEmbeddings(model='text-embedding-3-large', dimensions=32,api_key=os.getenv("OPEN_API_KEY"))
+result_openai_embeddocs_vector = openai_embedding_models.embed_documents(Documents)
 ```
 
 Above code will convert the Documents text into vector of dimensions 32 as specified in the model
@@ -47,3 +48,22 @@ Above code will convert the Documents text into vector of dimensions 32 as speci
 Repository of Open Source Embedding Models are in HuggingFace. We can run Open Source Models either using HugginFace Interface API or downloading it locally
 ### 1. all-MiniLM-L6-v2
 #### Parameters of  all-MiniLM-L6-v2 for Single query
+```
+Documents = [
+    "Ottawa is capital of Canada",
+    "WashingtonDC is capitcal of USA",
+    "New Delhi is the capital of USA"
+]
+hugginface_embedding_models = HuggingFaceEmbeddings(model_name = 'sentence-transformers/all-MiniLM-L6-v2')
+result_hugginface_embeddocs_vector = hugginface_embedding_models.embed_documents(Documents)
+```
+Above code will convert the Documents text into vector of dimensions 384 as per model default specification
+
+#### Code output
+Running first time it takes time as its download the model from Hugginface into local system before processing our query
+![image](https://github.com/user-attachments/assets/9de11104-c841-4fb5-98e7-e9936de38120)
+
+In below snapshot we can see it downloded the model into local sytem, and then it converted the documents into vectors
+![image](https://github.com/user-attachments/assets/aba1ddb0-a5d0-4133-8cd0-43a9406091c0)
+
+
