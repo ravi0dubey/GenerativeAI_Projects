@@ -58,8 +58,12 @@ hugginface_embedding_models = HuggingFaceEmbeddings(model_name = 'sentence-trans
 result_hugginface_embeddocs_vector = hugginface_embedding_models.embed_documents(Documents)
 ```
 Above code will convert the Documents text into vector of dimensions 384 as per model default specification
+
 #### Code output
 Running first time it takes time as its download the model from Hugginface into local system before processing our query
+![image](https://github.com/user-attachments/assets/9de11104-c841-4fb5-98e7-e9936de38120)
+
+In below snapshot we can see it downloded the model into local sytem, and then it converted the documents into vectors
 ![image](https://github.com/user-attachments/assets/aba1ddb0-a5d0-4133-8cd0-43a9406091c0)
 
 
