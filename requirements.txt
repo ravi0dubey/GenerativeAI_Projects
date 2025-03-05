@@ -30,6 +30,6 @@ scikit-learn
 #Deep Learning
 tensorflow
 tf-keras
-
+streamlit
 boto3
 Pillow
