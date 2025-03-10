@@ -26,5 +26,4 @@ Select the type of prompts and and click on Summarize button, we will get the ou
 ![alt text](image-5.png)
 
 ## Using Chains
-
-![alt text](image-6.png)
+![image](https://github.com/user-attachments/assets/08ff82a2-ad1e-4d3a-ba42-dd1673c5a444)
