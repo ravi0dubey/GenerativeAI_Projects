@@ -14,7 +14,7 @@ Enter the prompt and click on Summarize button, we will get the output as shown 
 ![alt text](image.png)
 
 
-## Running Dymanic Prompt
+## Running Dynamic Prompt
 
 Run command streamlit run .\2_LangChain_research\5_prompts_dynmaic_UI_.py
 
@@ -24,3 +24,7 @@ We will get URL. Click on the URL. Input screen to enter prompt will be asked
 
 Select the type of prompts and and click on Summarize button, we will get the output as shown below
 ![alt text](image-5.png)
+
+## Using Chains
+
+![alt text](image-6.png)
