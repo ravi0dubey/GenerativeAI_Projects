@@ -8,3 +8,6 @@ To avoid the issue we need to store the chat history and it works fine
 
 ![image](https://github.com/user-attachments/assets/c50b8377-d491-4ef1-aab0-257468d0332b)
 
+Storing chathistory along with the type of chat history, Whether is humanMessage or AIMessage
+
+![image](https://github.com/user-attachments/assets/26401aeb-6444-4880-8c7c-3873ae0858e0)
