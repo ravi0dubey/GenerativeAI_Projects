@@ -1,5 +1,5 @@
 
-from langchain_core.prompts import PromptTemplate, ChatPromptTemplate,FewShotPromptTemplate
+from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, FewShotPromptTemplate
 from langchain_openai import ChatOpenAI
 from openai import OpenAI
 import os
