@@ -1,6 +1,6 @@
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-from typing import TypedDict
+from typing import TypedDict, Annotated
 import os
 
 load_dotenv()
@@ -12,6 +12,8 @@ model_openapi= ChatOpenAI(model = "gpt-4o-mini",temperature=0, api_key=os.getenv
 class Review(TypedDict):
     summary: str
     sentiment: str
+    brief_summary: Annotated[str,"A Brief summary of the review"]
+    type_sentiment: Annotated[str,"Return sentiment of the review either, negative, positive or neutral"]
 
 
 
@@ -24,3 +26,5 @@ the frame and lens is fine just because the seller had no responsibility of the 
 
 print(f"Summary of Review:{result['summary']}")
 print(f"Sentiment of Review :{result['sentiment']}")
+print(f"Brief Summary of Review:{result['brief_summary']}")
+print(f"Review Sentiment Type :{result['type_sentiment']}")
