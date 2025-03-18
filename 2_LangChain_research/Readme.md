@@ -27,3 +27,8 @@ Select the type of prompts and and click on Summarize button, we will get the ou
 
 ## Using Chains
 ![image](https://github.com/user-attachments/assets/08ff82a2-ad1e-4d3a-ba42-dd1673c5a444)
+
+## Learning Pydantic 
+
+![image](https://github.com/user-attachments/assets/96483a80-4922-4710-b218-97c888b9968f)
+
