@@ -21,6 +21,7 @@ class Review_upgrade(TypedDict):
     type_sentiment: Annotated[str,"Return sentiment of the review either, negative, positive or neutral"]
     pros : Annotated[Optional[list[str]],"Write down all the pros inside a list"]
     cons : Annotated[Optional[list[str]],"Write down all the cons inside a list"]
+    name : Annotated[Optional[str],"Write down the name of reviewer"]
 
 
 # Step3.1 : Invoke Model laden with  TypeDict class
@@ -54,7 +55,7 @@ Sometimes hang for 5min
 
 At last I will say in this range it's a pretty good offer...... And if u van get any offer u can go for real me narzo 50
 For example I will put some pics taken from the phone
-
+Reviewed by : Ravi Dubey                                 
 """)
 
 print(f"Summary of Review:{result1['summary']}")
@@ -70,3 +71,4 @@ print(f"Brief Summary of Review:{result2['brief_summary']}")
 print(f"Review Sentiment Type :{result2['type_sentiment']}")
 print(f"Pros Review :{result2['pros']}")
 print(f"Cons Review :{result2['cons']}")
+print(f"Reviewer Name :{result2['name']}")

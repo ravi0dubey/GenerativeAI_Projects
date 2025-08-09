@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 # 1. Dynamic Prompt
 Dynamic_prompt = PromptTemplate.from_template('Summarize {topic} in {tone} tone')
 print(Dynamic_prompt.format(topic ='Tennis', tone = 'fun'))
+print(Dynamic_prompt.format(topic ='Tennis', tone = 'technical'))
 
 # 2. Role-Based Prompt
 role_based_prompt = ChatPromptTemplate.from_template([
@@ -29,16 +30,7 @@ example_prompt = PromptTemplate(
 example_str = "".join([example_prompt.format(**example) for example in examples])
 
 main_prompt = PromptTemplate(
-    input_variables=["question"],
-    template=f"""
-    Here are some examples:\n{example_str}\nNow answer the following question:\nInput: {{question}}\nOutput:
-    """
-)
-
-question = "Describe linear regression."
-prompt = main_prompt.format(question=question)
-print(prompt)
-
+    input_variables=["question"]
 
 
 llm = OpenAI(api_key="your_openai_api_key")

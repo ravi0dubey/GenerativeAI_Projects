@@ -33,3 +33,4 @@ tf-keras
 streamlit
 boto3
 Pillow
+pydantic
