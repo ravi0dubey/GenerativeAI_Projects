@@ -7,8 +7,8 @@ import os
 
 Documents = [
     "Ottawa is capital of Canada",
-    "WashingtonDC is capitcal of USA",
-    "New Delhi is the capital of USA"
+    "WashingtonDC is capital of USA",
+    "New Delhi is the capital of India"
 ]
 print ("Result1 with model OpenAi-text-embedding-3-large")
 openai_embedding_models = OpenAIEmbeddings(model='text-embedding-3-large', dimensions=32,api_key=os.getenv("OPEN_API_KEY"))

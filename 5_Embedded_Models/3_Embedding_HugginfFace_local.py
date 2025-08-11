@@ -7,8 +7,8 @@ import os
 
 Documents = [
     "Ottawa is capital of Canada",
-    "WashingtonDC is capitcal of USA",
-    "New Delhi is the capital of USA"
+    "WashingtonDC is capital of USA",
+    "New Delhi is the capital of India"
 ]
 print ("Result1 with model Hugginface-all-MiniLM-L6-v2")
 hugginface_embedding_models = HuggingFaceEmbeddings(model_name = 'sentence-transformers/all-MiniLM-L6-v2')
