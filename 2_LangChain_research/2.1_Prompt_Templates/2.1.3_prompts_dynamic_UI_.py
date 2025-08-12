@@ -5,6 +5,8 @@ import os
 from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate,load_prompt
 
+
+load_dotenv()
 model_openapi= ChatOpenAI(model = "gpt-4o-mini",temperature=0, api_key=os.getenv("OPEN_API_KEY") )
 
 st.header('Research Tool_ Dynamic')
@@ -12,6 +14,7 @@ paper_input = st.selectbox("Select Research paper Name",["Attention is All you N
 style_input = st.selectbox("Select Explanation Style",["Beginner-Friendly", "Technical", "Code-Oriented", "Mathematical"])
 length_input = st.selectbox("Select Explanation Length",["Short (1-2 paragraphs)", "Medium (3-5 paragraphs)", "Long (detailed explanation)"])
 
+# loading template.json file which was created by 2.1.4_prompts_dynamic_generator.py
 template = load_prompt("template.json")
 prompt = template.invoke({
         'paper_input' : paper_input,
@@ -22,5 +25,3 @@ prompt = template.invoke({
 if st.button('Summarize'):
     result = model_openapi.invoke(prompt)  
     st.write(result.content)
-
-

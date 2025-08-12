@@ -1,6 +1,8 @@
 from langchain_core.prompts import PromptTemplate
 
 # template
+# On running this python file, it will create template.json file
+
 template = PromptTemplate(
     template="""
 Please summarize the research paper titled "{paper_input}" with the following specifications:
@@ -18,4 +20,4 @@ input_variables=['paper_input', 'style_input','length_input'],
 validate_template=True
 )
 
-template.save('template1.json')
+template.save('template.json')
