@@ -32,6 +32,8 @@ iv. It does not support images, audio or video
 ##### 1.Temperature parameter
 ![image](https://github.com/user-attachments/assets/e8ead1c5-4c49-4b84-a92e-58c178741a09)
 
+In case of lower temperature, output will remain same every time we invoke the model. While if we increase the temperature the output will keep on changing every time we invoke the model.
+
 ##### 2.max_completion_tokens
 It is the count of token we get in output results. If we see result4, our answer is not even complete.
 
