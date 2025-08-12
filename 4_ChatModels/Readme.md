@@ -1,7 +1,7 @@
 # Chat Models
 
 ******We have two types of Chat Models******
-1. **Closed-Source Models**
+1. **Closed-Source Models** -> It has to be run using API.
 2. **Open-Source Models** -> It can be run locally or using HugginFace Interface API
 
 ![image](https://github.com/user-attachments/assets/9e4985ec-0053-4bc5-ab90-d31f51ac49f3)
