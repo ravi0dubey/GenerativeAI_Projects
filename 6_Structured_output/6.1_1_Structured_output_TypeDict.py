@@ -15,7 +15,7 @@ class Review(TypedDict):
     brief_summary: Annotated[str,"A Brief summary of the review"]
     type_sentiment: Annotated[str,"Return sentiment of the review either, negative, positive or neutral"]
 
-class Review_upgrade(TypedDict):
+class Review_annotated(TypedDict):
     key_themes : Annotated[list[str],"Write down all the key themes discussed in the review in a list"]
     brief_summary: Annotated[str,"A Brief summary of the review"]
     type_sentiment: Annotated[str,"Return sentiment of the review either, negative, positive or neutral"]
@@ -31,7 +31,7 @@ the frame and lens is fine just because the seller had no responsibility of the 
 """)
 
 # Step3.2 : Invoke Model laden with  TypeDict class
-strcutured_model2 = model_openapi.with_structured_output(Review_upgrade)
+strcutured_model2 = model_openapi.with_structured_output(Review_annotated)
 result2= strcutured_model2.invoke(""" 
 First I would like to rate this phone in the following basics after 1 month of use
 1) Battery life- 6000mah is a pretty huge and good performance battery.... Butvu have to take care of it if u want the same backup for the coming years... Don't on the battery saver when it's 55% or above... It can damage ur battery backup...
@@ -58,13 +58,16 @@ For example I will put some pics taken from the phone
 Reviewed by : Ravi Dubey                                 
 """)
 
+
+
+print(" *** Review  ***")
 print(f"Summary of Review:{result1['summary']}")
 print(f"Sentiment of Review :{result1['sentiment']}")
 print(f"Brief Summary of Review:{result1['brief_summary']}")
 print(f"Review Sentiment Type :{result1['type_sentiment']}")
 
 
-print(" *** output 2 ***")
+print(" *** Annotated Reviews ***")
 
 print(f"Brief Summary of Review:{result2}")
 print(f"Brief Summary of Review:{result2['brief_summary']}")
