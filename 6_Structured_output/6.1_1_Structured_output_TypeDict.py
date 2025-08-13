@@ -19,6 +19,7 @@ class Review_annotated(TypedDict):
     key_themes : Annotated[list[str],"Write down all the key themes discussed in the review in a list"]
     brief_summary: Annotated[str,"A Brief summary of the review"]
     type_sentiment: Annotated[str,"Return sentiment of the review either, negative, positive or neutral"]
+    # Reviews could have pros, cons and name or it mightnot have. In such case use Optional in the Annotation
     pros : Annotated[Optional[list[str]],"Write down all the pros inside a list"]
     cons : Annotated[Optional[list[str]],"Write down all the cons inside a list"]
     name : Annotated[Optional[str],"Write down the name of reviewer"]
@@ -30,7 +31,7 @@ result1= strcutured_model1.invoke("""Paying over 12k and getting a product with 
 the frame and lens is fine just because the seller had no responsibility of the customers money iam returning this....worst experience I have ever had.
 """)
 
-# Step3.2 : Invoke Model laden with  TypeDict class
+# Step3.2 : Invoke Model laden with  TypeDict class for annotated reviews
 strcutured_model2 = model_openapi.with_structured_output(Review_annotated)
 result2= strcutured_model2.invoke(""" 
 First I would like to rate this phone in the following basics after 1 month of use
