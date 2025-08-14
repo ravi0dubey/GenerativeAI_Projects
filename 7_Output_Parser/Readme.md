@@ -11,9 +11,6 @@ Json, CSV, Pydantic models and more thereby ensuring consistency, validation and
 ### 1 String Output Parser (StrOutputParser)
 It parses output of LLM models and return it as plain string.
 
-
-### 2 String Output Parser (StrOutputParser)
-
 We create a stringoutput parser in which,  Template1,  which is a prompt1 is passed to the model which generates detailed output. 
 Detailed output is passed to string output parser  which extracts text from the detailed report.
 Detailed report is send to template2 to generate 2nd prompt which is sent to model to generate summary report.
@@ -24,3 +21,7 @@ chain = template1 | llm_model | string_parser | template2 | llm_model | string_p
 On running code we get below output
 
 ![alt text](image.png)
+
+
+
+### 2 Json Output Parser ()
