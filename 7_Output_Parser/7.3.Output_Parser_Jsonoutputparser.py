@@ -17,13 +17,15 @@ template = PromptTemplate(
     input_variables=[],
     partial_variables= {'format_instruction' :json_parser.get_format_instructions() }
     )
-prompt = template.format()
 
-# Step 3 Invoke the llm model and pass prompt in it
-result = llm_model.invoke(prompt)
 
-# Step 4 Parse the outout in json format and print it
-final_result = json_parser.parse(result.content)
+# Step 3 Create a Chain which does following
+# Template which is a prompt is passed to the model which generates output. 
+# from output, parser will extract the json variable and print it.
+
+chain = template | llm_model | json_parser 
+final_result = chain.invoke({})
+
 print(final_result)
 print(f"name : {final_result['name']}")
 print(f"age : {final_result['age']}")
