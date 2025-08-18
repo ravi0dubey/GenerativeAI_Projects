@@ -25,3 +25,6 @@ On running code we get below output
 
 
 ### 2 Json Output Parser ()
+
+It parses output of LLM models and return it as Json format.
+![alt text](image-1.png)
