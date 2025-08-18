@@ -5,7 +5,8 @@ Json, CSV, Pydantic models and more thereby ensuring consistency, validation and
 ## We have 3 types of Output Parser
 1. String Output Parser (StrOutputParser)
 2. Json Output Parser
-3. Pydantic Output Parser 
+3. Structured Output Parser
+4. Pydantic Output Parser 
 
 
 ### 1 String Output Parser (StrOutputParser)
@@ -24,7 +25,15 @@ On running code we get below output
 
 
 
-### 2 Json Output Parser ()
+### 2 Json Output Parser
 
 It parses output of LLM models and return it as Json format.
 ![alt text](image-1.png)
+
+
+### 3. Structured Output Parser 
+
+It is similar to Json Output parser but over here we can provide schema for the
+output the way we want to receive the response.
+
+![alt text](image-2.png)
