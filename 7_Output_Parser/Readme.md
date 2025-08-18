@@ -37,3 +37,10 @@ It is similar to Json Output parser but over here we can provide schema for the
 output the way we want to receive the response.
 
 ![alt text](image-2.png)
+
+### 4. Pydantic Output Parser 
+
+It is similar to Json Output parser but over here we can provide schema for the
+output the way we want to receive the response.
+
+![alt text](image-3.png)
