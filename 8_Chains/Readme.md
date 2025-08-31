@@ -44,6 +44,10 @@ Detailed report is send to prompt2 which is sent to model to generate 5 pointer 
 ![alt text](image-2.png)
 
 
+Chain graph looks like below, it has prompt input -> which fills prompt template ->   which is used by llm model-> output of llm model is extracted by string output parser -> it fills prompt2 -> which is used by llm model-> output of llm model is extracted by string output parser and we get the output
+
+![alt text](image-3.png)
+
 ### 3 Parallel Chains()
 
 It executes multiple tasks simultaneously, each independent of the other.

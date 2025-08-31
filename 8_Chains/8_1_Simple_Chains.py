@@ -30,6 +30,6 @@ result = chain.invoke({'topic' : 'Yoga'})
 print(result)
 
 
-# Step 5 Invoke the chain and pass a topic 
+# Step 6 Print graph of the Simple chain
 chain.get_graph().print_ascii()
 

@@ -34,3 +34,6 @@ chain = prompt1 | model_openapi | string_parser | prompt2 | model_openapi | stri
 # Step 5 Invoke the chain and pass a topic 
 result = chain.invoke({'topic' : 'soccer'})
 print(result)
+
+# Step 6 Print graph of the Sequential chain
+chain.get_graph().print_ascii()
