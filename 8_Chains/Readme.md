@@ -23,14 +23,26 @@ chain = Prompt | model_openapi | string_parser
 On running code we get below output
 ![alt text](image.png)
 
-We can print the chain graph which looks like below
+Chain graph looks like below, it has prompt input -> which fills prompt template ->   which is used by llm model-> output of llm model is extracted by string output parser and we get the output
 
 ![alt text](image-1.png)
 
 ### 2 Sequential Chains()
 
 It Executes tasks one after another, passing output from one step as input to the next.
-Example: Translating English text to Hindi → Summarizing Hindi text → Saving the summary.
+Example: Creating a detailed report  → Extracting 5 pointer summary from the detailed report.
+
+chain = prompt1 | model_openapi | string_parser | prompt2 | model_openapi | string_parser
+
+For above command of sequential chain, below steps works.
+
+Prompt1 is passed to the model which generates detailed output about the topic. 
+Detailed output is passed to string output parser which extracts text from the detailed report.
+Detailed report is send to prompt2 which is sent to model to generate 5 pointer summary from the detailed report. From summary report , parser will extract the text.
+
+
+![alt text](image-2.png)
+
 
 ### 3 Parallel Chains()
 
