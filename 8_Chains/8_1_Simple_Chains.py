@@ -28,3 +28,8 @@ chain = Prompt | model_openapi | parser
 # Step 5 Invoke the chain and pass a topic 
 result = chain.invoke({'topic' : 'Yoga'})
 print(result)
+
+
+# Step 5 Invoke the chain and pass a topic 
+chain.get_graph().print_ascii()
+
