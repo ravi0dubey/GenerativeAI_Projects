@@ -52,15 +52,15 @@ Chain graph looks like below, it has prompt input -> which fills prompt template
 
 It executes multiple tasks simultaneously, each independent of the other.
 
-####  Step 7.1 Create Parallel chain using RunnableParallel which does two task parallely
-####     a. Task1 : Prompt1 is passed to the model which generates detailed output about the topic. 
-####     and Detailed output is passed to string output parser which extracts 5 notes from the detailed report using prompt2
-####     b. Task2 : Prompt2 is passed to the model which generates detailed output about the topic. 
-####     and Detailed output is passed to string output parser which generates quiz from the detailed report using prompt3.
+ Step 7.1 Create Parallel chain using RunnableParallel which does two task parallely
+     a. Task1 : Prompt1 is passed to the model which generates detailed output about the topic. 
+     and Detailed output is passed to string output parser which extracts 5 notes from the detailed report using prompt2
+     b. Task2 : Prompt2 is passed to the model which generates detailed output about the topic. 
+     and Detailed output is passed to string output parser which generates quiz from the detailed report using prompt3.
 
-####  Step 7.2  Create Merge_chain which uses prompt4 to merge output of task1 and task2 into one
+  Step 7.2  Create Merge_chain which uses prompt4 to merge output of task1 and task2 into one
 
-####  Step 7.3  Create a final chain which runs parallel_chain and merge_chain in sequence.
+  Step 7.3  Create a final chain which runs parallel_chain and merge_chain in sequence.
 
 parallel_chain = RunnableParallel(
     {'notes': prompt1 | model_openapi | string_parser | prompt2 | model_openapi | string_parser ,
@@ -77,6 +77,7 @@ final_chain = parallel_chain | merge_chain
 Chain graph looks like below, it has prompt input -> which fills prompt template ->   which is used by llm model-> output of llm model is extracted by string output parser -> it fills prompt2 -> which is used by llm model-> output of llm model is extracted by string output parser and we get the output
 
 ![alt text](image-5.png)
+
 ![alt text](image-6.png)
 
 ### 4 Conditional Chains()
