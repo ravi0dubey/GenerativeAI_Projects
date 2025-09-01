@@ -15,7 +15,7 @@ class Person(BaseModel):
     age: int = Field(gt=18, description=' Age of the person')
     city: str = Field(description= 'City where the person belongs to')
 
-# Step 2 Create Structured Output Parser
+# Step 2 Create Pydantic Output Parser
 pydantic_parser = PydanticOutputParser(pydantic_object=Person)
 
 # Step 3 : Create  Prompt to get details about fictional person

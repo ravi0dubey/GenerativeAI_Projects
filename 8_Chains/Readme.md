@@ -27,10 +27,13 @@ Chain graph looks like below, it has prompt input -> which fills prompt template
 
 ![alt text](image-1.png)
 
+
+
 ### 2 Sequential Chains()
 
 It Executes tasks one after another, passing output from one step as input to the next.
-Example: Creating a detailed report  → Extracting 5 pointer summary from the detailed report.
+
+Example: Creating a detailed report for a given topic and from detailed report extracting 5 pointer summary.
 
 chain = prompt1 | model_openapi | string_parser | prompt2 | model_openapi | string_parser
 
@@ -48,9 +51,14 @@ Chain graph looks like below, it has prompt input -> which fills prompt template
 
 ![alt text](image-3.png)
 
+
 ### 3 Parallel Chains()
 
 It executes multiple tasks simultaneously, each independent of the other.
+
+Example : Creating Notes and at same time creating quiz for a given topic and merging
+both Notes and quiz as one output.
+
 
  Step 7.1 Create Parallel chain using RunnableParallel which does two task parallely
      a. Task1 : Prompt1 is passed to the model which generates detailed output about the topic. 
@@ -72,15 +80,33 @@ merge_chain = prompt4 | model_openapi | string_parser
 
 final_chain = parallel_chain | merge_chain
 
-![alt text](image-4.png)
+![alt text](image-7.png)
 
-Chain graph looks like below, it has prompt input -> which fills prompt template ->   which is used by llm model-> output of llm model is extracted by string output parser -> it fills prompt2 -> which is used by llm model-> output of llm model is extracted by string output parser and we get the output
+Parallel Chain graph looks like below, it has prompt input -> which fills prompt template ->   which is used by llm model-> output of llm model is extracted by string output parser -> it fills prompt2 -> which is used by llm model-> output of llm model is extracted by string output parser and we get the output
 
 ![alt text](image-5.png)
 
 ![alt text](image-6.png)
 
+
 ### 4 Conditional Chains()
 
 Executes tasks based on conditions or logic defined in the process.
-Example: If input text is in English, translate to Hindi; if input text is in Hindi, directly summarize it.
+
+Example: If feedback from users are positive then respond with "Thank you" message while at same time if feedback is negative then respond with "We will look into it" message.
+
+In case where Feedback is not good, we get below response
+result1 = final_chain.invoke({'feedback' : 'Product is not good'})
+![alt text](image-8.png)
+
+In case where Feedback is not good, we get below response
+result1 = final_chain.invoke({'feedback' : 'Product is okay sort of'})
+![alt text](image-9.png)
+
+result1 = final_chain.invoke({'feedback' : 'Product is kinda so so'})
+![alt text](image-10.png)
+
+
+Conditional  Chain graph looks like below, it has prompt input -> which fills prompt template  and classify it as Positive or Negative, extracting the actual literal feedback using pydanticOutput Praser ->  The sentiment invokes the appropriate Branch either Positive or Negative and accordingly call Branchoutput to perform the task meant for the Branch
+
+![alt text](image-11.png)

@@ -40,25 +40,21 @@ string_parser = StrOutputParser()
 #     b. Task2 : Prompt2 is passed to the model which generates detailed output about the topic. 
 #     and Detailed output is passed to string output parser which generates quiz from the detailed report using prompt3.
 
-#  Step 7.2  Create Merge_chain which uses prompt4 to merge output of task1 and task2 into one
-
-#  Step 7.3  Create a final chain which runs parallel_chain and merge_chain in sequence.
-
 parallel_chain = RunnableParallel(
     {'notes': prompt1 | model_openapi | string_parser | prompt2 | model_openapi | string_parser ,
      'quiz' : prompt1 | model_openapi | string_parser | prompt3 | model_openapi | string_parser
      }
 )
 
+#  Step 7.2  Create Merge_chain which uses prompt4 to merge output of task1 and task2 into one
 merge_chain = prompt4 | model_openapi | string_parser 
 
+#  Step 7.3  Create a final chain which runs parallel_chain and merge_chain in sequence.
 final_chain = parallel_chain | merge_chain
 
-
 # Step 8 Invoke the chain and pass a topic 
-result1 = parallel_chain.invoke({'topic' : 'soccer worldcup 2010'})
+result1 = final_chain.invoke({'topic' : 'soccer worldcup 2010'})
 print(result1)
-
 
 # Step 9 Print graph of the Parallel chain
 final_chain.get_graph().print_ascii()

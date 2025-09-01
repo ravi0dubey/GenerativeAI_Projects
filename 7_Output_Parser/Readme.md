@@ -2,7 +2,7 @@
 Output Parser help convert raw LLM response into structured formats like
 Json, CSV, Pydantic models and more thereby ensuring consistency, validation and ease of use in the applications.
 
-## We have 3 types of Output Parser
+## We have 4 types of Output Parser
 1. String Output Parser (StrOutputParser)
 2. Json Output Parser
 3. Structured Output Parser
