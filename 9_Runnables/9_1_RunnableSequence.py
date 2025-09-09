@@ -10,18 +10,23 @@ load_dotenv()
 # Step 1 : Create a model
 model_openapi= ChatOpenAI(model = "gpt-4",temperature=0,  api_key=os.getenv("OPEN_API_KEY") )
 
-# Step 2 : Create Prompt about Topic
-prompt = PromptTemplate(
+# Step 2 : Create Prompt1 about Topic
+prompt1 = PromptTemplate(
     template='Write a joke about a topic \n {topic}',
     input_variables=['topic'],
     )
 
-# Step 3 Create String Output Parser
+# Step 3 : Create Prompt2 which will explain the job about the Topic
+prompt2 = PromptTemplate(
+    template='Explain the joke \n {text}',
+    input_variables=['text'],
+    )
+# Step 4 Create String Output Parser
 string_parser = StrOutputParser()
 
-# Step 4 Create a Runnable sequence
-chain = RunnableSequence(prompt,model_openapi,string_parser)
+# Step 5 Create a Runnable sequence
+chain = RunnableSequence(prompt1,model_openapi,string_parser,prompt2,model_openapi,string_parser)
 
-# Step 13  Run Chain
+# Step 6  Run Chain
 result1 = chain.invoke({'topic' : 'pizza'})
 print(result1)

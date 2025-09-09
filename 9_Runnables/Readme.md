@@ -12,13 +12,13 @@ Hereâ€™s a simple diagram of a LangChain Runnable pipeline: each step (Prompt â†
 
 ### 1 Sequence_Runnables()
 
-It simply executes step written in below command 
+It simply executes step in a sequence as shown below.
 
-chain = RunnableSequence(prompt,model_openapi,string_parser)
+chain = RunnableSequence(prompt1,model_openapi,string_parser,prompt2,model_openapi,string_parser)
 
 On running code we get below output
 
-![alt text](image.png)
+![alt text](image-2.png)
 
 
 
