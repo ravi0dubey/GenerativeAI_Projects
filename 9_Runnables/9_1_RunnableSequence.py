@@ -28,5 +28,5 @@ string_parser = StrOutputParser()
 chain = RunnableSequence(prompt1,model_openapi,string_parser,prompt2,model_openapi,string_parser)
 
 # Step 6  Run Chain
-result1 = chain.invoke({'topic' : 'pizza'})
+result1 = chain.invoke({'topic' : 'AI'})
 print(result1)
