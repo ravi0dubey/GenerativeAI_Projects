@@ -40,3 +40,16 @@ parallel_chain = RunnableParallel({
 
 On running code we get below output
 ![alt text](image-5.png)
+
+### 3. RunnablePassthrough
+It returns input as output. Very helpful when we also want the output from LLM in its originality along with some processing done on input.
+Eg:
+When we want to get a Joke and the explanation of the joke in such case, original joke can be retrieved using RunnablePassthrough while explanation can be retrieved using RunnableSequence.
+
+joke_gen_chain= RunnableSequence(prompt1,model_openapi,string_parser)
+parallel_chain = RunnableParallel(
+{ 'Joke': RunnablePassthrough(),'Explanation' : RunnableSequence(prompt2,model_openapi,string_parser)})
+final_chain = RunnableSequence(joke_gen_chain,parallel_chain)
+
+On running code we get below output
+![alt text](image-6.png)
