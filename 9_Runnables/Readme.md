@@ -33,7 +33,7 @@ On running code we get below output
 
 ### 2 RunnableParallel
 It is a runnable Primitive that allows multiple runnables to execute in parallel. Each runnable receives the same input and process it independently and in parallel sequence, producing a dictionary of outputs.
-
+![alt text](image-8.png)
 parallel_chain = RunnableParallel({
  'tweet': RunnableSequence(promptX,model_openapi,string_parser), 
 'LinkedIn' : RunnableSequence(promptL,model_openapi,string_parser)})
@@ -45,7 +45,7 @@ On running code we get below output
 It returns input as output. Very helpful when we also want the output from LLM in its originality along with some processing done on input.
 Eg:
 When we want to get a Joke and the explanation of the joke in such case, original joke can be retrieved using RunnablePassthrough while explanation can be retrieved using RunnableSequence.
-
+![alt text](image-7.png)
 joke_gen_chain= RunnableSequence(prompt1,model_openapi,string_parser)
 parallel_chain = RunnableParallel(
 { 'Joke': RunnablePassthrough(),'Explanation' : RunnableSequence(prompt2,model_openapi,string_parser)})
