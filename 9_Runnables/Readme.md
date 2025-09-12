@@ -57,3 +57,21 @@ final_chain = RunnableSequence(joke_gen_chain,parallel_chain)
 
 On running code we get below output
 ![alt text](image-6.png)
+
+### 4. RunnableLambda
+It allows us to apply custom Python functions within an AI pipeline. It acts as a middleware between different AI components, enabling preprocessing, transformation, API calls, filtering, and post-processing in a Langchain workflow.
+
+Eg:
+When we want to get a Joke and also count the number of words in the joke in such case, original joke can be retrieved using RunnablePassthrough while explanation can be retrieved using RunnableSequence.
+
+![alt text](image-9.png)
+
+joke_gen_chain = RunnableSequence(prompt1,model_openapi,string_parser)
+
+parallel_chain = RunnableParallel({ ‘Joke’: RunnablePassthrough(),‘count’ :RunnableLambda(lambda x : word_counter(x))})
+
+final_chain = RunnableSequence(joke_gen_chain,parallel_chain)
+
+On running code we get below output
+
+![alt text](image-10.png)
