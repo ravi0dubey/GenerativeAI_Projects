@@ -75,3 +75,24 @@ final_chain = RunnableSequence(joke_gen_chain,parallel_chain)
 On running code we get below output
 
 ![alt text](image-10.png)
+
+### 5. RunnableBranch
+
+It allows to conditionally route input data to different chains or runnables based on custom logic. It is like a if/elif/else block for chains, where we define a set of conditional functions and each function is associated with a runnable.
+Eg:
+If we get customer email then LLM needs to analyze the nature of request in the email and route to appropriate team/BOT to handle it.
+
+![alt text](image-11.png)
+
+Runnable Branch Flow for above use case would be
+
+![alt text](image-12.png)
+
+branch_chain = RunnableBranch(
+    (lambda x:x.Sentiment == 'Positive', positive_sentiment),
+    (lambda x:x.Sentiment == 'Negative', negative_sentiment),
+    RunnableLambda(lambda x: " Could not find the sentiment from the given Feedback")
+)
+
+On running code we get below output
+![alt text](image-13.png)
