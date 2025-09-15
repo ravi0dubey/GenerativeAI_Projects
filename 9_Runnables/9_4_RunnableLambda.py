@@ -23,13 +23,12 @@ def word_counter(text):
 # Step 4 Create String Output Parser
 string_parser = StrOutputParser()
 
-# Step 5 Create a Runnable Parallel
-
+# Step 5 Create a Runnable Lambda
 joke_gen_chain = RunnableSequence(prompt1,model_openapi,string_parser)
 
 parallel_chain = RunnableParallel(
     { 'Joke': RunnablePassthrough(),
-      'count' : RunnableLambda(lambda x : word_counter(x))
+      'word_count' : RunnableLambda(word_counter)
     }
 )
 
@@ -39,4 +38,4 @@ final_chain = RunnableSequence(joke_gen_chain,parallel_chain)
 result = final_chain.invoke({'topic' : 'AI'})
 
 print(f"Joke : {result['Joke']}")
-print(f"Count of words: {result['count']}")
+print(f"Count of words: {result['word_count']}")
