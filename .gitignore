@@ -1,3 +1,7 @@
 api_key
 .env
 genaivenv
+*.txt
+*.pdf
+*.xlsx
+*.csv

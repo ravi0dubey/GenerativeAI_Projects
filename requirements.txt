@@ -1,6 +1,7 @@
 # LangChain Core
 langchain
 langchain_core
+langchain_community
 
 
 # OpenAI Integration
