@@ -18,8 +18,8 @@ The text after splitting remains meaningful.
 
 ### 3. Document_based_Text_Splitters
 
-It is used to split documents which does not contain regular text. 
+It is used to split documents which does not contain regular text like markup readme file, code.
 A python program cannot be splitted using conventional split technique to maintain the sanctity of the code
-To split we will still use RecursiveCharacterTextSplitter
+To split we will still use RecursiveCharacterTextSplitter which split the code making it meaninful.
 
-![alt text](image-3.png)
+![alt text](image-5.png)

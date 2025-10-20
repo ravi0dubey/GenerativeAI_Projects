@@ -18,7 +18,8 @@ load_dotenv()
 model_openapi= ChatOpenAI(model = "gpt-4",temperature=0,  api_key=os.getenv("OPEN_API_KEY") )
 
 # Step 2 : Load the text document
-loader = TextLoader('2.2.1_chains_understanding.py')
+loader = TextLoader('test_program.py')
+# loader = TextLoader('2.2.1_chains_understanding.py')
 docs = loader.load()
 
 # Step 3 : Extract the actual text content from the first document
@@ -27,7 +28,7 @@ print("Loaded text:\n", text)
 
 # Step 4 : Create Splitter object
 splitter = RecursiveCharacterTextSplitter(
-    chunk_size = 35,
+    chunk_size = 700,
     chunk_overlap = 0,
 )
 
