@@ -9,3 +9,7 @@ Output of  Text document \n
 \n Output of  PDF document\n
 
 ![alt text](image-1.png)
+
+### 2. TextStructured Based Splitter
+
+![alt text](image-2.png)
