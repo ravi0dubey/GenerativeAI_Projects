@@ -12,9 +12,12 @@ Output of  Text document \n
 
 ![alt text](image-1.png)
 
+
 ### 2. TextStructured Based Splitter
-Text is splitted first at Word level, then at Line level and finally at Paragraph level so that context of the text is not lost.
-The text after splitting remains meaningful.
+
+We observe how the input text is organized, like its organized at paragaraph level or at sentence level or at line level and finally at word level.
+Accordingly splitting of text is done.
+Text is splitted first at Word level, then at Line level , then at sentence level and finally at Paragraph level so that context of the text is not lost and the text after splitting remains meaningful.
 
 ![alt text](image-2.png)
 
