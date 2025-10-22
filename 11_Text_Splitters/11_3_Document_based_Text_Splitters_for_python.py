@@ -1,23 +1,21 @@
 import os
 from langchain_community.document_loaders import TextLoader
 from langchain_openai import ChatOpenAI
-
-from pydantic import BaseModel, Field
-from typing import Literal
 from dotenv import load_dotenv
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter, Language
 
 load_dotenv()
 
 
-# Text is splitted first at Word level, then at Line level and finally at Paragraph level so that
-# context of the text is not lost. The text after splitting remains meaningful.
+# It is used to split documents which does not contain regular text. 
+# A python program cannot be splitted using conventional split technique to maintain the sanctity of the code
+# To split we will still use RecursiveCharacterTextSplitter
 
 # Step 1 : Create a model
 model_openapi= ChatOpenAI(model = "gpt-4",temperature=0,  api_key=os.getenv("OPEN_API_KEY") )
 
 # Step 2 : Load the text document
-loader = TextLoader('chat1.txt', encoding ='utf-8')
+loader = TextLoader('sample_test_program.py')
 docs = loader.load()
 
 # Step 3 : Extract the actual text content from the first document
@@ -25,8 +23,9 @@ text = docs[0].page_content
 print("Loaded text:\n", text)
 
 # Step 4 : Create Splitter object
-splitter = RecursiveCharacterTextSplitter(
-    chunk_size = 35,
+splitter = RecursiveCharacterTextSplitter.from_language(
+    language= Language.PYTHON,
+    chunk_size = 700,
     chunk_overlap = 0,
 )
 

@@ -10,7 +10,7 @@ load_dotenv()
 model_openapi= ChatOpenAI(model = "gpt-4",temperature=0,  api_key=os.getenv("OPEN_API_KEY") )
 
 # Step 2 : Load the text document
-loader = PyPDFLoader('DataScience_topics.pdf')
+loader = PyPDFLoader('sample_pdf.pdf')
 docs = loader.load()
 
 # Step 3 : Extract the actual text content from the first document

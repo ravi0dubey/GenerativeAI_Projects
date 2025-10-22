@@ -2,6 +2,8 @@
 
 ### 1. Length Based Splitter
 
+It splits the text of text or pdf document based on the number of characters passed as input
+
 Output of  Text document \n
 
 ![alt text](image.png)
@@ -20,6 +22,19 @@ The text after splitting remains meaningful.
 
 It is used to split documents which does not contain regular text like markup readme file, code.
 A python program cannot be splitted using conventional split technique to maintain the sanctity of the code
-To split we will still use RecursiveCharacterTextSplitter which split the code making it meaninful.
+To split we will  use RecursiveCharacterTextSplitter.from_language where language is python to split knowing it is a python code
+<!-- splitter = RecursiveCharacterTextSplitter.from_language(
+    language= Language.PYTHON,
+    chunk_size = 700,
+    chunk_overlap = 0,
+) -->
 
 ![alt text](image-5.png)
+
+Splitting Markdown file using same RecursiveCharacterTextSplitter.from_language but
+<!-- splitter = RecursiveCharacterTextSplitter.from_language(
+    language= Language.MARKDOWN,
+    chunk_size = 300,
+    chunk_overlap = 0,
+) -->
+![alt text](image-6.png)
