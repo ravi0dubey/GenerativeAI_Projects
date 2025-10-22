@@ -44,3 +44,5 @@ splitter = RecursiveCharacterTextSplitter.from_language(
 ![alt text](image-6.png)
 
 ### 4. Semantic_based_Text_Splitters
+
+It is used to split based on the meaning of the text.

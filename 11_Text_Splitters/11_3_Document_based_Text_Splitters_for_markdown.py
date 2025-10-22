@@ -8,7 +8,7 @@ load_dotenv()
 
 
 # It is used to split documents which does not contain regular text. 
-# A python program cannot be splitted using conventional split technique to maintain the sanctity of the code
+# A Readmecannot be splitted using conventional split technique to maintain the sanctity of the text
 # To split we will still use RecursiveCharacterTextSplitter
 
 # Step 1 : Create a model
@@ -24,14 +24,14 @@ text = docs[0].page_content
 print("Loaded text:\n", text)
 
 # Step 4 : Create Splitter object
-splitter = RecursiveCharacterTextSplitter.from_language(
+text_splitter = RecursiveCharacterTextSplitter.from_language(
     language= Language.MARKDOWN,
     chunk_size = 300,
     chunk_overlap = 0,
 )
 
 # Step 5 : Print the result
-result = splitter.split_text(text)
+result = text_splitter.split_text(text)
 
 # Step 6: Print the result
 print("\n--- Split Chunks ---")

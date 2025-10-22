@@ -2,6 +2,7 @@
 langchain
 langchain_core
 langchain_community
+langchain_experimental-0.3.4
 
 
 # OpenAI Integration
