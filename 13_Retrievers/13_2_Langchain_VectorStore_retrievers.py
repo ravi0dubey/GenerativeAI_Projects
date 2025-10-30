@@ -25,17 +25,15 @@ vectorstore = Chroma.from_documents(
 )
 
 # Step 4 : Convert vectorstore into a retriever
-
 retriever = vectorstore.as_retriever(search_kwargs={"k":2})
 
 # Step 5: Define your query
 query = "Give me details about Embeddings?"
 
-# Step 6: Get the relevant Wikipedia documents
+# Step 6: Get the relevant response
 results = retriever.invoke(query)
 
 # Step 7: Print retrieved content
-
 for i, doc in enumerate(results):
     print(f"Document {i+1}:")
     print(doc.page_content)
