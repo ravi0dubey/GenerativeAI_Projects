@@ -18,3 +18,7 @@ with "lambda_mult": 1 we get results like similarity search
 
 with "lambda_mult": 0.5 we get diverse results
 ![alt text](image-4.png)
+
+### 4. MultiQuery Retriever
+
+![alt text](image-6.png)
