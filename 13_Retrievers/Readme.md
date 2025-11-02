@@ -22,3 +22,6 @@ with "lambda_mult": 0.5 we get diverse results
 ### 4. MultiQuery Retriever
 
 ![alt text](image-6.png)
+
+### 5. Contextual Compression  Retriever
+![alt text](image-7.png)
