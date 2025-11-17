@@ -1,4 +1,8 @@
-## Custom Tool
+# Langchain Tools
+
+## 1. Built-In Tools
+## 2. Custom Tool 
+These are custom build tools, built by us
 
 ### Build the tools by giving it
 
@@ -37,3 +41,7 @@ def multiply_numbers_ravi(a: int, b: int) -> int:
    "type":"object"
 }
 ```
+
+## 3. Structured Tools
+
+It is a special type of tool where the input to the tool follows a structured schema, typically defined using a Pydantic model.
