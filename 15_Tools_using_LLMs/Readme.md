@@ -8,6 +8,8 @@
 
 
 This is what LLM sees when it reaches to the tool multiply_numbers_ravi
+
+```json
 {
    "description":"Multiplies two numbers.",
    "properties":{
@@ -27,3 +29,4 @@ This is what LLM sees when it reaches to the tool multiply_numbers_ravi
    "title":"multiply_numbers_ravi",
    "type":"object"
 }
+```
