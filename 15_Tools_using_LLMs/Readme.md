@@ -45,3 +45,20 @@ def multiply_numbers_ravi(a: int, b: int) -> int:
 ## 3. Structured Tools
 
 It is a special type of tool where the input to the tool follows a structured schema, typically defined using a Pydantic model.
+
+a. Inherited Base Model function `MultiplyNumbersInput`  which strictly enforce the input and output data type.
+b. Personalized function  `multiply_numbers_structured_ravi`  which does the multiplication operations.
+c. Final function `multiply_tool` will be Structured tool function which will have func =  Personalized function `multiply_numbers_structured_ravi`
+    and args_schema = Base Model function  `MultiplyNumbersInput`. Description is mandatory in it.
+
+```python
+multiply_tool = StructuredTool.from_function(
+    func = multiply_numbers_structured_ravi,
+    name = "multiply_numbers_structured_ravi",
+    description = "Multiplies two numbers",
+    args_schema = MultiplyNumbersInput
+    )
+
+```
+
+## 3. Base Tools
