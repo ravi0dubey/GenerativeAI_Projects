@@ -81,3 +81,31 @@ class MultiplyTool_New(BaseTool):
     c = a * b
     return c
 ```
+
+
+# Tool Binding
+
+Its is step where we registers **Custom** or **Structured** tools with LLM so that 
+a. LLM knows what all tools are available for its `functioning`.
+b. LLM knows what each tools `does`.
+c. LLM knows what `input format` to use for each tools. This is done via reading the schema of the tools.
+![alt text](image-1.png)
+
+
+
+# Tool Calling
+
+It is the process whre the LLM decides, during a conversation or task, that it needs to use a specific tool(function) 
+and generates a structured output(Schema) which has following: </br>
+
+a. the `name of the tool`
+b. and the `arguments` to call it with
+
+The LLM does not run the tool, it just suggest the tool and the input argument. The actual execution is handled by **LanChain**.
+
+
+![alt text](image.png) </br>
+
+![alt text](image-2.png)
+
+As we can see in above images, LLM gets the name of the tool and the arguments
