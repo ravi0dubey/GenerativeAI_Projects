@@ -1,10 +1,12 @@
 # Langchain Tools
 
-## 1. Built-In Tools
+## 1. Types of LangChain Tools
+
+### 1.1. Built-In Tools
 Built in tools defined by LangChain itself.
 
 
-## 2. Custom Tool 
+### 1.2. Custom Tool 
 These are custom build tools, built by us
 
 a. Personalized function name — in this case `multiply_numbers_ravi`  
@@ -44,7 +46,7 @@ def multiply_numbers_ravi(a: int, b: int) -> int:
 ```
 
 
-## 3. Structured Tools
+### 1.3. Structured Tools
 
 It is a special type of tool where the input to the tool follows a structured schema, typically defined using a Pydantic model.
 
@@ -63,7 +65,7 @@ multiply_tool = StructuredTool.from_function(
 
 ```
 
-## 4. Base Tools
+###  1.4. Base Tools
 
 Its abstract base class for all tools in LangChain which defines core structure and interface for any tool to follow.
 Tools like Built-In Tools, Custom Tool, and StructuredTool are built on top of BaseTool.
@@ -83,7 +85,7 @@ class MultiplyTool_New(BaseTool):
 ```
 
 
-# Tool Binding
+# 2 Tool Binding
 
 Its is step where we registers **Custom** or **Structured** tools with LLM so that 
 a. LLM knows what all tools are available for its `functioning`.
@@ -93,7 +95,7 @@ c. LLM knows what `input format` to use for each tools. This is done via reading
 
 
 
-# Tool Calling
+# 3 Tool Calling
 
 It is the process whre the LLM decides, during a conversation or task, that it needs to use a specific tool(function) 
 and generates a structured output(Schema) which has following: </br>
@@ -109,3 +111,12 @@ The LLM does not run the tool, it just suggest the tool and the input argument. 
 ![alt text](image-2.png)
 
 As we can see in above images, LLM gets the name of the tool and the arguments
+
+
+# 4 Tool Execution
+
+It is the step where the actual Tool is run using the input arguments that LLM suggested during tool calling.
+
+eg.
+LLM says 'Hey, call the multiply tool with input parameters a =10, b= 20  </br>
+Tool Execution is when LangChain actually run the mutiply operation (a =10, b= 20 ) and get the result = 200
